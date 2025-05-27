@@ -1,0 +1,349 @@
+/* ===== Reset and Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Body Background ===== */
+body {
+  background: url('community-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #f5f5f5; /* Fallback background color */
+  font-family: 'Roboto', sans-serif;
+  color: #2e2e2e;
+}
+
+/* ===== Header Styles with Gradient ===== */
+#mainHeader {
+  background: linear-gradient(to right, #ff6f61, #d56e8b); /* Warm peach to pink gradient */
+  color: white;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.5s ease;
+}
+
+#mainHeader:hover {
+  background: linear-gradient(to right, #d56e8b, #ff6f61); /* Reversed gradient on hover */
+}
+
+/* ===== Section Headings ===== */
+h2 {
+  background: linear-gradient(to right, #6e9c6a, #627e56); /* Orange gradient */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin: 25px 0;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Oswald', sans-serif;
+}
+
+h2:hover {
+  color: #fff;
+  background: linear-gradient(to right, #ffa500, #ff8c00);
+}
+
+/* ===== Event Card Styling ===== */
+.eventCard {
+  background-color: rgba(255, 255, 255, 0.95); /* Light background */
+  border: 1px solid #ddd;
+  margin: 30px auto;
+  padding: 30px;
+  width: 75%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.eventCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.eventCard h3 {
+  color: #d56e8b; /* Pink color for event title */
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-family: 'Lora', serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.eventCard:hover h3 {
+  color: #ff6f61; /* Highlight title on hover */
+}
+
+.eventCard p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+/* -------------------- Typography Styles -------------------- */
+
+/* Base font setup */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2e2e2e;
+}
+
+/* Section headers */
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Event titles */
+.eventCard h3 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Lora', serif;
+  color: #d56e8b;
+  letter-spacing: 1px;
+}
+
+/* Event descriptions */
+.eventCard p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+/* Footer text */
+footer p {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: #777;
+  margin-top: 30px;
+}
+
+/* Task 6: Link and List Styling */
+
+/* Style all states of links */
+a:link {
+  color: #ff6f61;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:visited {
+  color: #6a6a6a;
+}
+
+a:hover {
+  color: #ff8c00;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #d56e8b;
+}
+
+/* Navigation menu styling */
+.nav-menu {
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.nav-menu li {
+  padding: 8px 15px;
+}
+
+.nav-menu a {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 16px;
+  background-color: #ff6f61;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background-color: #d56e8b;
+  color: white;
+}
+
+/* Task 7: Table Styling */
+
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.event-table th,
+.event-table td {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+/* Zebra striping */
+.event-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.event-table th {
+  background-color: #ff6f61;
+  color: white;
+  text-transform: uppercase;
+}
+
+.event-table tbody tr:hover {
+  background-color: #ffebee;
+  cursor: pointer;
+}
+
+/* ===== Task 8: Box Model and Visibility Demo ===== */
+
+/* Box demonstrating margin, border, padding, outline */
+.demo-box {
+  margin: 30px auto;
+  padding: 25px;
+  border: 3px solid #ff8c00;
+  outline: 2px dashed #ff5722;
+  background-color: #fffbe6;
+  color: #333;
+  width: 60%;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Form outline on focus */
+.outline-form input.focus-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+}
+
+.outline-form input.focus-input:focus {
+  outline: 3px solid #ff8c00;
+  border-color: #ff5722;
+}
+
+/* Visibility and display demo boxes */
+.box {
+  width: 60%;
+  margin: 10px auto;
+  padding: 20px;
+  text-align: center;
+  border: 2px dashed #2196f3;
+  background-color: #e3f2fd;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.box:hover {
+  background-color: #bbdefb;
+}
+
+.hidden-box {
+  visibility: hidden;
+}
+
+.none-box {
+  display: none;
+}
+
+/* ===== Task 9: Multi column in Text ===== */
+
+.news-article {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+  padding: 20px;
+  background-color: #f9f9f9;
+  hyphens: auto;
+  transition: column-count 0.3s ease;
+}
+
+.news-article:hover {
+  column-count: 1;
+}
+
+/* ===== Task 10: Responsive Web Design with Media Queries ===== */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-menu a {
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    color: #ff6f61;
+  }
+
+  .eventCard,
+  .demo-box,
+  .box {
+    width: 90%; /* Use % for flexible layout */
+  }
+
+  .event-table {
+    font-size: 12px;
+  }
+
+  .news-article {
+    column-count: 1;
+    padding: 10px;
+  }
+
+  input.focus-input {
+    width: 80vw;
+  }
+}
+
+/* Bonus: Flexbox layout for nav */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Make tables and boxes more responsive */
+.event-table th, .event-table td {
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Make images (if any) responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
