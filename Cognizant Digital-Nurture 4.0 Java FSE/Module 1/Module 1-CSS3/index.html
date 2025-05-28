@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Local Community Event Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Basic CSS for a better layout */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fc;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .eventCard {
+      background-color: #fff;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .eventCard:hover {
+      transform: scale(1.05);
+    }
+
+    .eventCard h3 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    .eventCard p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+    table th, table td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    table th {
+      background-color: #f4f4f4;
+    }
+
+    /* Styling for interactive form and visibility task */
+    .demo-box {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #e2f7e1;
+      border: 2px solid #4CAF50;
+      border-radius: 8px;
+    }
+    .visible-box {
+      visibility: visible;
+      background-color: lightgreen;
+      padding: 10px;
+      margin-top: 10px;
+      border: 2px solid #4CAF50;
+    }
+    .hidden-box {
+      visibility: hidden;
+      background-color: lightcoral;
+      padding: 10px;
+      margin-top: 10px;
+      border: 2px solid #F44336;
+    }
+    .none-box {
+      display: none;
+      background-color: lightblue;
+      padding: 10px;
+      margin-top: 10px;
+      border: 2px solid #2196F3;
+    }
+
+    /* Interactive form */
+    .outline-form {
+      margin-top: 20px;
+    }
+    .focus-input:focus {
+      outline: 2px solid #4CAF50;
+    }
+
+    /* Add some space for the footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="mainHeader">
+    <h1>Welcome to the Local Community Portal</h1>
+
+    <!-- Navigation menu (ul list) -->
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Workshops</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Upcoming Events</h2>
+      
+      <!-- Interactive event cards -->
+      <div class="eventCard">
+        <h3>Nature Clean-Up Drive</h3>
+        <p>Join us for a community clean-up event to make our neighborhood a cleaner place.</p>
+      </div>
+
+      <div class="eventCard">
+        <h3>Community Potluck Picnic</h3>
+        <p>Bring your favorite dish and enjoy a sunny afternoon with friends and family.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Workshops</h2>
+      <div class="eventCard">
+        <h3>Cooking Class for Beginners</h3>
+        <p>Learn to cook easy, healthy meals in our hands-on cooking workshop.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Event Admin Table</h2>
+      <table class="event-table">
+        <thead>
+          <tr>
+            <th>Event Name</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nature Clean-Up Drive</td>
+            <td>June 5, 2025</td>
+            <td>Park Entrance</td>
+            <td>Confirmed</td>
+          </tr>
+          <tr>
+            <td>Community Potluck Picnic</td>
+            <td>June 10, 2025</td>
+            <td>Main Park</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>Cooking Class for Beginners</td>
+            <td>June 15, 2025</td>
+            <td>Community Center</td>
+            <td>Confirmed</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Box Model & Visibility</h2>
+      <div class="demo-box">
+        This box demonstrates margin, border, padding, and outline.
+      </div>
+
+      <form class="outline-form">
+        <label>
+          Your Name:
+          <input type="text" class="focus-input" placeholder="Enter your name" />
+        </label>
+      </form>
+
+      <div class="box visible-box">I am visible</div>
+      <div class="box hidden-box">I am hidden (visibility)</div>
+      <div class="box none-box">I am gone (display)</div>
+    </section>
+
+    <section class="news-article">
+      <h2>Community Bulletin</h2>
+      <p>The Local Community Bulletin invites you to join our upcoming events, including the Community Clean-Up Drive on June 5, the Neighborhood Potluck Picnic on June 10, and Yoga in the Park every Saturday morning. Don’t miss the Local Farmer’s Market every Sunday, and attend the Community Meeting on June 12 to discuss local issues. Youth Sports Registration is now open, and our Free Tutoring Program starts June 15 to support students. Also, be aware of roadwork on Oak Street and the new trash pickup schedule starting next month. For more details, contact us at contact@localportal.com. Join us and make a difference in our community!</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Stay connected! <a href="mailto:contact@localportal.com">contact@localportal.com</a></p>
+    <p>© 2025 Local Community Portal. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Example of toggling the visibility of the hidden box
+    document.querySelector('.visible-box').addEventListener('click', function() {
+      document.querySelector('.hidden-box').style.visibility = 'visible';
+    });
+
+    document.querySelector('.hidden-box').addEventListener('click', function() {
+      document.querySelector('.none-box').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
